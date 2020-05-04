@@ -1,5 +1,5 @@
 project:
-  name: qs-workshop
+  name: qsworkshop
   regions:
   - ap-southeast-1
   - us-east-1
@@ -9,12 +9,11 @@ tests:
   default:
     template: ./templates/master.template.yaml
     regions:
-    - us-west-1
+    - us-west-2
     parameters:
       AvailabilityZones: "$[taskcat_getaz_2]"
       EmailAddress: mupadhya@usc.edu
       KeyPairName: qsworkshop
       WebserverCIDR: "0.0.0.0/0"
-      QSS3KeyPrefix: "qs-workshop/"
+      QSS3KeyPrefix: "qsworkshop/"
       QSS3BucketName: "$[taskcat_autobucket]"
-
